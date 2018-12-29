@@ -52,6 +52,7 @@ class MessageHandler(BaseHTTPRequestHandler):
         mesg = form.format("\n".join(memory))
         self.wfile.write(mesg.encode())
 
+
 if __name__ == '__main__':
     server_address = ('', 8000)
     httpd = HTTPServer(server_address, MessageHandler)
